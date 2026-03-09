@@ -1,1 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Attack Button</title>
+</head>
+<body>
+    <h1>Random Attack Roll</h1>
+    <button id="attackButton">Attack</button>
+    <p id="result">Result: -</p>
 
+    <script>
+        const button = document.getElementById('attackButton');
+        const result = document.getElementById('result');
+
+        button.addEventListener('click', () => {
+            const randomNumber = Math.floor(Math.random() * 20) + 1;
+            result.textContent = `Result: ${randomNumber}`;
+        });
+    </script>
+</body>
+</html>
